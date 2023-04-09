@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * Documentation for this.
+ */
+$path = dirname(__FILE__);
+
+/**
+ * Documentation for this.
+ */
+require $path.'/vendor/autoload.php';
+
+/**
+ * Documentation for this.
+ */
+require $path.'/bootstrap/app.php';
+
+/**
+ * Documentation for this.
+ */
+$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
+
+/**
+ * Documentation for this.
+ */
+$input = new Symfony\Component\Console\Input\ArgvInput;
+
+/**
+ * Documentation for this.
+ */
+$output = new Symfony\Component\Console\Output\ConsoleOutput;
+
+/**
+ * Documentation for this.
+ */
+$status = $kernel->handle($input, $output);
+
+/**
+ * Documentation for this.
+ */
+$kernel->terminate($input, $status);
+
+/**
+ * Documentation for this.
+ */
+exit($status);
